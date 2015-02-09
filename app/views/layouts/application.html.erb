@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <!-- <div class="login"> -->
+      <!-- <p class="notice"><%# notice %></p> -->
+      <!-- <p class="alert"><%# alert %></p> -->
+
+  <!--    <%# if user_signed_in? %>
+      <p><%# current_user.email %></p>
+      <p>
+      <%# link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+      </p>
+      <p>
+      <%# link_to('Edit registration', edit_user_registration_path) %>
+      </p>
+    <%# else %>
+
+      <p>
+      <%# link_to('Login', new_user_session_path)  %>  
+      </p>
+      <p>
+      <%# link_to('Register', new_user_registration_path)  %>
+      </p>
+    <%# end %> -->
+    <!-- </div> -->
+
+    <nav>
+      <li>Do you have an account? <%= link_to("Sign Up/ Sign In", new_user_registration_path) %></li>
+    </nav>
+
+    <h1>The GA Planner App</h1>
+
+    <div class="index">
+      <ul>
+        <li><%= link_to("Campuses", campus_path) %></li>
+        <li><%= link_to("Courses", courses_path) %></li>
+      </ul>
+
+    </div>
+    <%= yield %>
+
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<%= form_for(@user) do |f| %>
+<div class="field">
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</div>
+
+<%= f.fields_for :bookings do |b| %>
+  <div class="field">
+    <%= b.hidden_field :course_id %>
+    <%= b.text_field :payment %>
+    <%= b.label ""%>
+  </div>
+<% end %>

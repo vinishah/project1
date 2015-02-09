@@ -1,0 +1,19 @@
+<h2>Courses Available</h2>
+
+<div class="course">
+  <ul>
+    <li>
+      <%= link_to('New Course', new_course_path) %>
+    </li>
+  </ul>
+</div>
+
+<div class="courses">
+<% @courses.each do |course| %>
+  <p>
+    <%= link_to(course.name, course_path(course)) %>
+  </p>
+  <% end %>
+</div>
+
+  
