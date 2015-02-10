@@ -34,6 +34,7 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @campus = Campu.all
+    @bookings = Booking.all
   end
 
   def destroy

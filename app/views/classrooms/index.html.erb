@@ -1,0 +1,9 @@
+<h2>Index of Classrooms</h2>
+<ul>
+  <li><%= link_to('New Classroom', new_classroom_path) %></li>
+</ul>
+
+<% @classrooms.each do |classroom| %>
+<p><%= link_to(classroom.name, classroom_path(classroom)) %></p>
+
+<% end %>

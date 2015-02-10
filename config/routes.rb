@@ -1,15 +1,20 @@
 Rails.application.routes.draw do
-  get 'bookings/index'
+ 
+  get 'classrooms/index'
 
-  get 'bookings/new'
+  get 'classrooms/new'
 
-  get 'bookings/show'
+  get 'classrooms/show'
+
+  get 'classrooms/edit'
 
   root 'welcomes#index'
   resources :campus
   resources :classrooms
   resources :courses
+  resources :bookings
   devise_for :users
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

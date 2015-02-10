@@ -1,2 +1,14 @@
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
+<h2>All Bookings</h2>
+
+<table>
+  <tr>
+  <td>User</td>
+  <td>Course</td>
+  </tr>
+  <% @bookings.each do |booking| %>
+  <tr>
+  <td><%= booking.user.name %></td>
+  <td><%= booking.course.name %></td>
+  </tr>
+  <% end %>
+</table>

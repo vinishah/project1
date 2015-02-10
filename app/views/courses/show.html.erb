@@ -10,4 +10,9 @@
 
 <p><%= link_to('Delete Course', course_path(@course), method: :delete) %></p>
 
-<p><%= link_to('Book Course', bookings_path(@bookings) %></p>
+<%= form_for Booking.new do |f| %>
+<%= f.hidden_field :course_id, value: @course.id %> 
+<%= f.hidden_field :user_id, value: current_user.id %>
+<%= f.submit 'Book Course' %>
+
+<% end %>

@@ -1,0 +1,20 @@
+<h2>Classroom</h2>
+<table>
+  <tr>
+    <td>Classroom</td>
+    <td>Campus</td>
+    <td>Users</td>
+    <td>Course</td>
+  </tr>
+  <tr>
+    <% @bookings.each do |booking| %>
+    <td><%= @classroom.name %></td>
+    <td><%= @classroom.campu_id %></td>
+    <td><%= booking.user.name %></td>
+    <td><%= booking.course.name %></td>
+  </tr>
+  <% end %>
+</table>
+<p><%= link_to('Edit Classroom', edit_classroom_path(@classroom)) %></p>
+
+<p><%= link_to('Delete Classroom', classroom_path(@classroom), method: :delete) %></p>
