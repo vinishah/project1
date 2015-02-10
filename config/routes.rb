@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'bookings/index'
+
+  get 'bookings/new'
+
+  get 'bookings/show'
+
   root 'welcomes#index'
   resources :campus
   resources :classrooms

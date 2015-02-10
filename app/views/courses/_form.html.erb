@@ -1,22 +1,27 @@
 <div class="field">
-  <%= form_for User.new do |f| %>
+  <%= form_for @course do |f| %>
   <p><%= f.label :name %></p>
   <p><%= f.text_field :name %></p>
 
-  <p><%= f.label :email %></p>
-  <p><%= f.text_field :email %></p>
+  <p><%= f.label :city %></p>
+  <p><%= f.text_field :city %></p>
 
-  <p><%= f.label :password %></p>
-  <p><%= f.text_field :password %></p>
+  <p><%= f.label :price %></p>
+  <p><%= f.text_field :price %></p>
 
-  <p><%= f.label :role %></p>
-  <p><%= f.text_field :role %></p>
+  <p><%= f.label :duration %></p>
+  <p><%= f.text_field :duration %></p>
 
-  <p><%= f.label :courses_enrolled_in %></p>
-  <p><%= f.text_field :courses_enrolled_in %></p>
+  <p><%= f.label :max_capacity %></p>
+  <p><%= f.text_field :max_capacity %></p>
+
+  <p><%= f.label :start_date %></p>
+  <p><%= f.text_field :start_date %></p>
+
 
   <div class="submit">
     <p><%= f.submit %></p>
   </div>
   <% end %>
+  
 </div>

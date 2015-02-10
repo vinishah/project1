@@ -1,2 +1,4 @@
-<h2>Campus Index</h2>
-<p><%= @campus %></p>
+<h2>GA Campuses</h2>
+<% @campus.each do |campu| %>
+<p><%= link_to(campu.name, campu_path(campu)) %></p>
+<% end %>
