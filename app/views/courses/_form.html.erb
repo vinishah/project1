@@ -1,13 +1,22 @@
-<%= form_for(@user) do |f| %>
 <div class="field">
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
-</div>
+  <%= form_for User.new do |f| %>
+  <p><%= f.label :name %></p>
+  <p><%= f.text_field :name %></p>
 
-<%= f.fields_for :bookings do |b| %>
-  <div class="field">
-    <%= b.hidden_field :course_id %>
-    <%= b.text_field :payment %>
-    <%= b.label ""%>
+  <p><%= f.label :email %></p>
+  <p><%= f.text_field :email %></p>
+
+  <p><%= f.label :password %></p>
+  <p><%= f.text_field :password %></p>
+
+  <p><%= f.label :role %></p>
+  <p><%= f.text_field :role %></p>
+
+  <p><%= f.label :courses_enrolled_in %></p>
+  <p><%= f.text_field :courses_enrolled_in %></p>
+
+  <div class="submit">
+    <p><%= f.submit %></p>
   </div>
-<% end %>
+  <% end %>
+</div>

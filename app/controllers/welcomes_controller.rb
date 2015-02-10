@@ -3,5 +3,6 @@ class WelcomesController < ApplicationController
     @campus = Campu.all
     @users = User.all
     @courses = Course.all
+    @bookings = Booking.all
   end
 end
