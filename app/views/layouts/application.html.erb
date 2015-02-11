@@ -13,6 +13,8 @@
   </head>
 
   <body>
+  <nav>
+
      <div class="login"> 
        <p class="notice"><% notice %></p> 
        <p class="alert"><% alert %></p> 
@@ -22,18 +24,13 @@
         <p><%= link_to('Edit registration', edit_user_registration_path) %></p>
       <% else %>
 
-      <p>
+      <p>Do you have an account?
       <%= link_to('Login', new_user_session_path)  %>  
-      </p>
-      <p>
       <%= link_to('Register', new_user_registration_path)  %>
       </p>
     <% end %> 
      </div> 
-
-    <nav>
-      <li>Do you have an account? <%= link_to("Sign Up/ Sign In", new_user_registration_path) %></li>
-    </nav>
+  </nav>
 
     <h1>The GA Planner App</h1>
 
