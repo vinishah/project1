@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
  
-  get 'classrooms/index'
+  get '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
-  get 'classrooms/new'
-
-  get 'classrooms/show'
-
-  get 'classrooms/edit'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   root 'welcomes#index'
   resources :campus

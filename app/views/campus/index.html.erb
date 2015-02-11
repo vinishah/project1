@@ -1,4 +1,21 @@
 <h2>GA Campuses</h2>
+
 <% @campus.each do |campu| %>
-<p><%= link_to(campu.name, campu_path(campu)) %></p>
+  <p><%= link_to(campu.name, campu_path(campu)) %>
+
+
+  <% if can? :manage, campu %>
+    
+    <p><%= link_to('Edit', edit_campu_path(campu)) %>
+
+    <%= link_to('Delete', campu_path(campu), method: :delete) %></p>
+    
+  <% end %>
+
+  <% if can? :manage, campu %>
+  <p><%= link_to('Add New Campus', new_campu_path) %>
+  <% end %>
 <% end %>
+
+ 
+

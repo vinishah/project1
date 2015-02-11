@@ -3,6 +3,8 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
     @users = User.all
     @courses = Course.all
+    @classrooms = Classroom.all
+    @campus = Campu.all
   end
 
   def new

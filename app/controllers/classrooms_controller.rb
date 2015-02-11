@@ -6,7 +6,7 @@ class ClassroomsController < ApplicationController
   def show
     @classroom = Classroom.find(params[:id])
     @bookings = Booking.all
-    @course = Course.all
+    @courses = Course.all
     @campus = Campu.all 
   end
 

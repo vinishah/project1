@@ -32,7 +32,8 @@ co3 = Course.create(name: 'Product Management Immersive', price: '6000', duratio
 co4 = Course.create(name: 'Front End Web Development', price: '5000', duration: '4 weeks', start_date: '12.09.2015', max_capacity: '12', city: 'Hong Kong')
 co5 = Course.create(name: 'Data Science', price: '3000', duration: '3 weeks', start_date: '03.05.2015', max_capacity: '25', city: 'Melbourne')
 
-u1 = User.create!(name: 'vinisha', email: 'vinishash@gmail.com', password: 'cuddles123', password_confirmation: 'cuddles123')
+u1 = User.create!(name: 'Vinisha Hathiramani', email: 'vinishash@gmail.com', password: 'cuddles123', password_confirmation: 'cuddles123', role: 'admin')
+u2 = User.create!(name: 'Natalie Loh', email: 'natalie@loh.com', password: 'natalie', role: 'user')
 
 
 ca1.classrooms << cl1
@@ -41,12 +42,13 @@ ca3.classrooms << cl3
 ca4.classrooms << cl4
 ca5.classrooms << cl5 << cl6
 
-cl1.courses << co1 << co2
-cl2.courses << co2 << co3
-cl3.courses << co3 << co4
-cl4.courses << co4 << co5
+cl1.courses << co1
+cl2.courses << co2
+cl3.courses << co3 
+cl4.courses << co4 
 cl5.courses << co5
 
 co1.users << u1
+co2.users << u2
 
 

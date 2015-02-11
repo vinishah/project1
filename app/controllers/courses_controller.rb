@@ -1,4 +1,7 @@
 class CoursesController < ApplicationController
+
+authorize_resource
+
   def index
     @courses = Course.all
   end
@@ -31,7 +34,7 @@ class CoursesController < ApplicationController
     end
   end
 
-  def show
+  def show 
     @course = Course.find(params[:id])
     @campus = Campu.all
     @bookings = Booking.all

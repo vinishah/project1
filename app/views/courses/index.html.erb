@@ -1,11 +1,13 @@
 <h2>Courses Available</h2>
 
 <div class="course">
-  <ul>
-    <li>
-      <%= link_to('New Course', new_course_path) %>
-    </li>
-  </ul>
+  
+  <% @courses.each do |course| %>
+    <% if can? :manage, course %>
+      <%= link_to('Add New Course', new_course_path) %>
+    <% end %>
+  <% end %>
+  
 </div>
 
 <div class="courses">

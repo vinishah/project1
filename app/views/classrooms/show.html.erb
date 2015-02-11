@@ -3,18 +3,24 @@
   <tr>
     <td>Classroom</td>
     <td>Campus</td>
-    <td>Users</td>
+    <td>User: Name</td>
+    <td>User: Email Address</td>
     <td>Course</td>
   </tr>
   <tr>
     <% @bookings.each do |booking| %>
     <td><%= @classroom.name %></td>
-    <td><%= @classroom.campu_id %></td>
+    <td><%= @classroom.campu.name %></td>
     <td><%= booking.user.name %></td>
+    <td><%= booking.user.email %></td>
     <td><%= booking.course.name %></td>
   </tr>
   <% end %>
 </table>
-<p><%= link_to('Edit Classroom', edit_classroom_path(@classroom)) %></p>
 
-<p><%= link_to('Delete Classroom', classroom_path(@classroom), method: :delete) %></p>
+<% if can? :manage, @classroom %>
+  <%= link_to('Edit Classroom', edit_classroom_path(@classroom)) %>
+
+  <%= link_to('Delete Classroom', classroom_path(@classroom), method: :delete) %>
+
+<% end %>

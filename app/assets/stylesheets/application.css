@@ -15,3 +15,43 @@
  *= require foundation_and_overrides
 
  */
+
+header{
+  float: right;
+  border-top: double 3px;
+  border-bottom: double 3px;
+}
+
+h1{
+  clear:both;
+  padding: 20px;
+}
+
+.index li {
+  display: inline;
+  padding: 20px;
+  font-size: 20px;
+} 
+
+.index ul {
+margin-top: 20px;
+}
+
+body{
+  font-size: 16px;
+}
+
+h2{
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.banner {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(1.jpg) no-repeat;
+  width: 180px; /* Width of new image */
+  height: 236px; /* Height of new image */
+  padding-left: 180px; /* Equal to width of new image */
+}
