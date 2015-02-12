@@ -21,7 +21,8 @@
     <%= f.hidden_field :course_id, value: @course.id %> 
 
     <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.submit 'Apply for Course' %>
+    <%= f.submit 'Apply for Course', :onclick => "alert('Thank you for submitting your application! GA will follow up within 7 working days.')" %>
+
   <% end %>
   <% else %>
   <p>You must sign up to book a course with General Assembly.</p>
