@@ -27,13 +27,14 @@ cl4 = Classroom.create(name: 'four')
 cl5 = Classroom.create(name: 'five')
 cl6 = Classroom.create(name: 'six')
 
-co1 = Course.create(name: 'Web Development Immersive', price: '8000', duration: '12 weeks', start_at: Date.new(2015, 1, 12), end_at: Date.new(2015, 3, 3), max_capacity: '25', city: 'London')
-co2 = Course.create(name: 'User Experience Design Immersive', price: '6000', duration: '10 weeks', start_at: Date.new(2015, 3, 15), end_at: Date.new(2015, 5, 12), max_capacity: '10', city: 'New York City')
-co3 = Course.create(name: 'Product Management Immersive', price: '6000', duration: '10 weeks', start_at: Date.new(2015, 5, 23), end_at: Date.new(2015, 7, 10), max_capacity: '15', city: 'Seattle')
-co4 = Course.create(name: 'Front End Web Development', price: '5000', duration: '4 weeks', start_at: Date.new(2015, 9, 12), end_at: Date.new(2015, 10, 12), max_capacity: '12', city: 'Hong Kong')
-co5 = Course.create(name: 'Data Science', price: '3000', duration: '3 weeks', start_at: Date.new(2015, 6, 9), end_at: Date.new(2015, 7, 1), max_capacity: '25', city: 'Melbourne')
+co1 = Course.create!(name: 'Web Development Immersive', price: '8000', duration: '12 weeks', start_at: Date.new(2015, 1, 12), end_at: Date.new(2015, 3, 3), max_capacity: '25', city: 'London')
+co2 = Course.create!(name: 'User Experience Design Immersive', price: '6000', duration: '10 weeks', start_at: Date.new(2015, 3, 15), end_at: Date.new(2015, 5, 12), max_capacity: '10', city: 'New York City')
+co3 = Course.create!(name: 'Product Management Immersive', price: '6000', duration: '10 weeks', start_at: Date.new(2015, 5, 23), end_at: Date.new(2015, 7, 10), max_capacity: '15', city: 'Seattle')
+co4 = Course.create!(name: 'Front End Web Development', price: '5000', duration: '4 weeks', start_at: Date.new(2015, 9, 12), end_at: Date.new(2015, 10, 12), max_capacity: '12', city: 'Hong Kong')
+co5 = Course.create!(name: 'Data Science', price: '3000', duration: '3 weeks', start_at: Date.new(2015, 6, 9), end_at: Date.new(2015, 7, 1), max_capacity: '25', city: 'Melbourne')
 
 u1 = User.create!(name: 'Vinisha Hathiramani', email: 'vinishash@gmail.com', password: 'cuddles123', password_confirmation: 'cuddles123', role: 'admin')
+
 u2 = User.create!(name: 'Natalie Loh', email: 'natalie@loh.com', password: 'cuddles123', password_confirmation: 'cuddles123', role: 'user')
 
 
@@ -52,4 +53,4 @@ cl5.courses << co5
 co1.users << u1
 co2.users << u2
 
-
+puts 'vinisha magic show'
