@@ -28,6 +28,8 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'rails_admin'
 gem 'event-calendar', :require => 'event_calendar'
+gem 'fog'
+gem 'carrierwave', '0.9.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -11,6 +11,7 @@ Classroom.delete_all
 Course.delete_all
 User.delete_all
 Booking.delete_all
+Event.delete_all
 
 ca1 = Campu.create(name:'Second Home', country:'England')
 ca2 = Campu.create(name:'902 Broadway', country:'USA')
@@ -26,11 +27,11 @@ cl4 = Classroom.create(name: 'four')
 cl5 = Classroom.create(name: 'five')
 cl6 = Classroom.create(name: 'six')
 
-co1 = Course.create(name: 'Web Development Immersive', price: '8000', duration: '12 weeks', start_date: '12.01.2015', max_capacity: '25', city: 'London')
-co2 = Course.create(name: 'User Experience Design Immersive', price: '6000', duration: '10 weeks', start_date: '16.03.2015', max_capacity: '10', city: 'New York City')
+co1 = Course.create(name: 'Web Development Immersive', price: '8000', duration: '12 weeks', start_date: '12.01.2015', end_date: '03.04.2015', max_capacity: '25', city: 'London')
+co2 = Course.create(name: 'User Experience Design Immersive', price: '6000', duration: '10 weeks', start_date: '16.03.2015', end_date: '12.05.2015', max_capacity: '10', city: 'New York City')
 co3 = Course.create(name: 'Product Management Immersive', price: '6000', duration: '10 weeks', start_date: '24.06.2015', max_capacity: '15', city: 'Seattle')
-co4 = Course.create(name: 'Front End Web Development', price: '5000', duration: '4 weeks', start_date: '12.09.2015', max_capacity: '12', city: 'Hong Kong')
-co5 = Course.create(name: 'Data Science', price: '3000', duration: '3 weeks', start_date: '03.05.2015', max_capacity: '25', city: 'Melbourne')
+co4 = Course.create(name: 'Front End Web Development', price: '5000', duration: '4 weeks', start_date: '12.09.2015', end_date: '12.10.2015', max_capacity: '12', city: 'Hong Kong')
+co5 = Course.create(name: 'Data Science', price: '3000', duration: '3 weeks', start_date: '03.05.2015', end_date: '03.06.2015',max_capacity: '25', city: 'Melbourne')
 
 u1 = User.create!(name: 'Vinisha Hathiramani', email: 'vinishash@gmail.com', password: 'cuddles123', password_confirmation: 'cuddles123', role: 'admin')
 u2 = User.create!(name: 'Natalie Loh', email: 'natalie@loh.com', password: 'cuddles123', password_confirmation: 'cuddles123', role: 'user')
