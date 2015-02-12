@@ -8,7 +8,7 @@ authorize_resource
     @year = (params[:year] || (Time.zone || Time).now.year).to_i
 
     @shown_month = Date.civil(@year, @month)
-    # @event_strips = Course.event_strips_for_month(@shown_month)
+    @event_strips = Course.event_strips_for_month(@shown_month)
   end
 
   def new
@@ -53,6 +53,6 @@ authorize_resource
 
   private 
     def course_params
-      params.require(:course).permit(:name, :price, :city, :duration, :max_capacity, :start_date)
+      params.require(:course).permit(:name, :price, :city, :duration, :max_capacity, :start_at, :end_at)
     end
   end

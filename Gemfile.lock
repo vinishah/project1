@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/jemboh/event_calendar
+  revision: a32a60b6d45842b7c41018792eb2e61c5500db5b
+  specs:
+    event-calendar (2.3.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -70,7 +76,6 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
-    event-calendar (2.3.3)
     excon (0.44.1)
     execjs (2.3.0)
     fission (0.5.0)
@@ -307,7 +312,7 @@ DEPENDENCIES
   carrierwave (= 0.9.0)
   coffee-rails (~> 4.1.0)
   devise
-  event-calendar
+  event-calendar!
   fog
   foundation-rails
   jbuilder (~> 2.0)

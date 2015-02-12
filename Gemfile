@@ -27,7 +27,7 @@ gem 'foundation-rails'
 gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'rails_admin'
-gem 'event-calendar', :require => 'event_calendar'
+gem 'event-calendar', require: 'event_calendar', git: 'https://github.com/jemboh/event_calendar'
 gem 'fog'
 gem 'carrierwave', '0.9.0'
 # Use ActiveModel has_secure_password
@@ -39,7 +39,7 @@ gem 'carrierwave', '0.9.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'rails_12factor', group: :production
+gem 'rails_12factor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

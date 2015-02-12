@@ -21,8 +21,10 @@
 }
 
 body{
+  margin: 20px;
     text-align: center;
     padding-bottom: 25px;
+    background: grey;
 
     -webkit-animation: fadein 10s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 10s; /* Firefox < 16 */
@@ -85,13 +87,21 @@ header{
 li:hover
 {
   color: black;
-  background-color: grey;
+  background-color: black;
 }
 
-a:hover{
-  color: black;
- background-color: grey; 
+a{
+  color: blue;
+  font-size: 20px;
 }
+a:hover{
+  color: red;
+ background-color: black; 
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
 .index ul {
 margin-top: 20px;
   border-bottom: double 3px;
@@ -99,7 +109,9 @@ margin-top: 20px;
 }
 
 .image-line {
-   width: 1600px;
+   width: 1440px;
+   height: 132px;
+   background: white;
 
 }
 .image-cell {
@@ -107,6 +119,7 @@ margin-top: 20px;
    margin: 10px;
    float: left;
 }
+
 .image-clear {
    clear: both;
 }
@@ -126,6 +139,10 @@ h2{
 }
 
 footer{
-  border-bottom: double 3px;
-  border-top: double 3px;
+  margin: 20px;
+  padding: 10px;
+  color: white;
+  background: black;
+  border-bottom: double 3px red;
+  border-top: double 3px red;
 }
