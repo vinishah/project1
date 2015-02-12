@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
  
   get '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+  # get '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 

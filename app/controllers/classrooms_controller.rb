@@ -1,4 +1,7 @@
 class ClassroomsController < ApplicationController
+
+  authorize_resource 
+  
   def index
     @classrooms = Classroom.all.order(:name)
   end

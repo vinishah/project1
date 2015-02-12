@@ -7,8 +7,9 @@ class Ability
     if user.admin?
         can :manage, :all
     else
-        can :read, :all
-    end
+        can :read, [Campu, Booking, Course]
+    end 
+
    
 
     # if user.role? :superadmin

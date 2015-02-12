@@ -33,7 +33,7 @@ co4 = Course.create(name: 'Front End Web Development', price: '5000', duration: 
 co5 = Course.create(name: 'Data Science', price: '3000', duration: '3 weeks', start_date: '03.05.2015', max_capacity: '25', city: 'Melbourne')
 
 u1 = User.create!(name: 'Vinisha Hathiramani', email: 'vinishash@gmail.com', password: 'cuddles123', password_confirmation: 'cuddles123', role: 'admin')
-u2 = User.create!(name: 'Natalie Loh', email: 'natalie@loh.com', password: 'natalie', role: 'user')
+u2 = User.create!(name: 'Natalie Loh', email: 'natalie@loh.com', password: 'cuddles123', password_confirmation: 'cuddles123', role: 'user')
 
 
 ca1.classrooms << cl1

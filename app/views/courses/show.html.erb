@@ -3,6 +3,8 @@
 <p>It is <%= @course.duration %> long</p>
 <p> It costs: <%= number_to_currency(@course.price) %></p>
 <p>The start date is: <%= @course.start_date %></p>
+<p>The end date is: <%= @course.end_date %></p>
+
 <p>The maximum number of students in this class will be: <%= @course.max_capacity %></p>
 
   <% if can? :manage, @course %>

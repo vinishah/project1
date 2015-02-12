@@ -40,7 +40,11 @@
       <ul>
         <li><%= link_to("Campuses", campus_path) %></li>
         <li><%= link_to("Courses", courses_path) %></li>
-        <li><%= link_to("Classrooms", classrooms_path) %></li>
+       
+        <%if can? :manage, Classroom %>
+          <li><%= link_to("Classrooms", classrooms_path) %></li>
+        <% end %>
+
         <li><%= link_to("Bookings", bookings_path) %></li>
       </ul>
     </div>

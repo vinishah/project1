@@ -4,11 +4,10 @@
   
   <p><%= link_to(classroom.name, classroom_path(classroom)) %></p>
 
+<% end %>
 
-  <% if can? :manage, classroom %>
+<% if can? :manage, Classroom %>
 
-    <p><%= link_to('New Classroom', new_classroom_path) %></p>
+  <p><%= link_to('New Classroom', new_classroom_path) %></p>
     
-  <% end %>
-
 <% end %>

@@ -2,10 +2,8 @@
 
 <div class="course">
   
-  <% @courses.each do |course| %>
-    <% if can? :manage, course %>
+    <% if can? :manage, Course %>
       <%= link_to('Add New Course', new_course_path) %>
-    <% end %>
   <% end %>
   
 </div>
