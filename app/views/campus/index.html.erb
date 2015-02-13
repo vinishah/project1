@@ -12,10 +12,11 @@
     
   <% end %>
 
-  <% if can? :manage, campu %>
-  <p><%= link_to('Add New Campus', new_campu_path) %>
-  <% end %>
 <% end %>
+<% if can? :manage, Campu %>
+  <p><%= link_to('Add New Campus', new_campu_path) %>
+<% end %>
+
 
  
 
