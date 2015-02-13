@@ -27,11 +27,11 @@ cl4 = Classroom.create(name: 'four')
 cl5 = Classroom.create(name: 'five')
 cl6 = Classroom.create(name: 'six')
 
-co1 = Course.create!(name: 'Web Development Immersive', price: '8000', duration: '12 weeks', start_at: Date.new(2015, 1, 12), end_at: Date.new(2015, 3, 3), max_capacity: '25', city: 'London')
-co2 = Course.create!(name: 'User Experience Design Immersive', price: '6000', duration: '10 weeks', start_at: Date.new(2015, 3, 15), end_at: Date.new(2015, 5, 12), max_capacity: '10', city: 'New York City')
-co3 = Course.create!(name: 'Product Management Immersive', price: '6000', duration: '10 weeks', start_at: Date.new(2015, 5, 23), end_at: Date.new(2015, 7, 10), max_capacity: '15', city: 'Seattle')
-co4 = Course.create!(name: 'Front End Web Development', price: '5000', duration: '4 weeks', start_at: Date.new(2015, 9, 12), end_at: Date.new(2015, 10, 12), max_capacity: '12', city: 'Hong Kong')
-co5 = Course.create!(name: 'Data Science', price: '3000', duration: '3 weeks', start_at: Date.new(2015, 6, 9), end_at: Date.new(2015, 7, 1), max_capacity: '25', city: 'Melbourne')
+co1 = Course.create!(name: 'Web Development Immersive', price: '8000', duration: '4 weeks', start_at: Date.new(2015, 2, 1), end_at: Date.new(2015, 2, 28), max_capacity: '25', city: 'London')
+co2 = Course.create!(name: 'User Experience Design Immersive', price: '6000', duration: '3 weeks', start_at: Date.new(2015, 3, 1), end_at: Date.new(2015, 3, 21), max_capacity: '10', city: 'New York City')
+co3 = Course.create!(name: 'Product Management Immersive', price: '6000', duration: '2 weeks', start_at: Date.new(2015, 5, 17), end_at: Date.new(2015, 5, 31), max_capacity: '15', city: 'Seattle')
+co4 = Course.create!(name: 'Front End Web Development', price: '5000', duration: '1 week', start_at: Date.new(2015, 6, 12), end_at: Date.new(2015, 6, 19), max_capacity: '12', city: 'Hong Kong')
+co5 = Course.create!(name: 'Data Science', price: '3000', duration: '4 days', start_at: Date.new(2015, 4, 9), end_at: Date.new(2015, 4, 13), max_capacity: '25', city: 'Melbourne')
 
 u1 = User.create!(name: 'Vinisha Hathiramani', email: 'vinishash@gmail.com', password: 'cuddles123', password_confirmation: 'cuddles123', role: 'admin')
 

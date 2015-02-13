@@ -26,11 +26,11 @@ body{
     padding-bottom: 25px;
     background: grey;
 
-    -webkit-animation: fadein 10s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 10s; /* Firefox < 16 */
-        -ms-animation: fadein 10s; /* Internet Explorer */
-         -o-animation: fadein 10s; /* Opera < 12.1 */
-            animation: fadein 10s;
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 5s; /* Firefox < 16 */
+        -ms-animation: fadein 5s; /* Internet Explorer */
+         -o-animation: fadein 5s; /* Opera < 12.1 */
+            animation: fadein 5s;
 }
 
 @keyframes fadein {
@@ -100,7 +100,7 @@ a:hover{
  background-color: black; 
 }
 
-.grow { transition: all .2s ease-in-out; }
+.grow { transition: all 1s ease-in-out; }
 .grow:hover { transform: scale(1.1); }
 
 .index ul {
@@ -110,7 +110,7 @@ margin-top: 20px;
 }
 
 .image-line {
-   width: 1440px;
+   width: 1560px;
    height: 134px;
    background: white;
    border-top: 3px black;
@@ -118,9 +118,11 @@ margin-top: 20px;
 }
 
 .image-cell {
-   width: 100px;
-   margin: 10px;
+   width: 110px;
    float: left;
+   padding: 10px;
+   margin-bottom: 25px;
+   margin-left: 20px;
 }
 
 .image-clear {
@@ -143,7 +145,7 @@ h2{
 
 footer{
   margin: 20px;
-  padding: 10px;
+  padding: 1px;
   color: white;
   background: black;
   border-bottom: double 3px red;
