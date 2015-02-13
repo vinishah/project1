@@ -110,7 +110,7 @@ margin-top: 20px;
 }
 
 .image-line {
-   width: 1560px;
+   width: 1440px;
    height: 134px;
    background: white;
    border-top: 3px black;
@@ -118,11 +118,11 @@ margin-top: 20px;
 }
 
 .image-cell {
-   width: 110px;
+   width: 100px;
+   margin: 10px;
    float: left;
    padding: 10px;
-   margin-bottom: 25px;
-   margin-left: 20px;
+   margin-bottom: 30px;
 }
 
 .image-clear {
