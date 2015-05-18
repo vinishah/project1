@@ -10,7 +10,7 @@ class CampusController < ApplicationController
   end
 
   def new
-    @campu = campu.new
+    @campu = Campu.new
   end
 
   def create 
@@ -33,6 +33,10 @@ class CampusController < ApplicationController
   end
 
   private
+  def campu_params
+    params.require(:campu).permit(:name, :country)
+  end
+  
   def destroy
     @campu = Campu.find(params[:id])
     @campu.destroy

@@ -16,6 +16,8 @@
 
  */
 
+$font-default: 'Avenir', 'Helvetica', 'Arial';
+
 *{
   box-sizing: border-box;
 }
@@ -94,14 +96,14 @@ li:hover
 a{
   color: blue;
   font-size: 20px;
-}
-a:hover{
-  color: red;
- background-color: black; 
+  &:hover {
+    color: red;
+    background-color: black;
+  }
+  .grow { transition: all 1s ease-in-out; }
+  .grow:hover { transform: scale(1.1); }
 }
 
-.grow { transition: all 1s ease-in-out; }
-.grow:hover { transform: scale(1.1); }
 
 .index ul {
 margin-top: 20px;
@@ -150,4 +152,31 @@ footer{
   background: black;
   border-bottom: double 3px red;
   border-top: double 3px red;
+}
+
+.actions input{
+  background: black;
+  color: blue;
+  font-size: 20px;
+  &:hover{
+    color: lightblue;
+  }
+}
+
+.login{
+  float: right;
+  padding: 0px;
+  .notice{
+    float: right;
+    padding: 0px;
+  }
+  .alert{
+    float: right;
+  }
+  a{
+    float: right;
+    padding: 3px;
+    margin-bottom: 3px;
+    margin-top: -10px;
+  }
 }

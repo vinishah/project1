@@ -1,0 +1,21 @@
+%h2 Classroom
+%table
+  %tr
+    %td Classroom
+    %td Campus
+    %td User: Name
+    %td User: Email Address
+    %td Course
+  
+  %tr
+    - @bookings.each do |booking|
+    %tr= @classroom.name
+    %tr= @classroom.campu.name
+    %tr= booking.user.name
+    %tr= booking.user.email
+    %tr= booking.course.name
+
+- if can? :manage, @classroom
+  = link_to('Edit Classroom', edit_classroom_path(@classroom))
+
+  = link_to('Delete Classroom', classroom_path(@classroom), method: :delete)

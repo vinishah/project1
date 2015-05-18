@@ -1,0 +1,29 @@
+%h2 All Bookings
+
+.CSSTableGenerator
+  %table
+    %tr.title
+    %td Course
+    %td Country
+    %td Campus
+    %td Classroom
+    %td Start Date
+    %td End Date
+    %td Duration
+    %td Maximum Capacity
+    %td User: Name
+    %td User: Email Address
+    
+    - @bookings.each do |booking|
+      %tr
+      %td= booking.course.name
+      %td= booking.course.classroom.campu.country 
+      %td= booking.course.classroom.campu.name
+      %td= booking.course.classroom.name
+      %td= booking.course.start_at
+      %td= booking.course.end_at
+      %td= booking.course.duration
+      %td= booking.course.max_capacity
+      %td= booking.user.name
+      %td= booking.user.email
+ 

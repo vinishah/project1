@@ -1,0 +1,27 @@
+.field
+  = form_for @course do |f|
+    %p= f.label :name
+    %p= f.text_field :name
+
+    %p= f.label :city
+    %p= f.text_field :city
+
+    %p= f.label :price
+    %p= f.text_field :price
+
+    %p= f.label :duration
+    %p= f.text_field :duration
+
+    %p= f.label :max_capacity
+    %p= f.text_field :max_capacity
+
+    %p= f.label :start_at
+    %p= f.date_select :start_at
+
+    %p= f.label :end_at
+    %p= f.date_select :end_at
+
+
+
+    .submit
+      %p= f.submit

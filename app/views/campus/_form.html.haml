@@ -1,0 +1,10 @@
+.field
+  =form_for @campu do |f| 
+    %p= f.label :country
+    %p= f.text_field :country
+
+    %p= f.label :name
+    %p= f.text_field :name
+
+    .submit
+      %p= f.submit

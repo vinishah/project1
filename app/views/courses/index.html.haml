@@ -1,0 +1,12 @@
+%h2 Courses Available
+
+.course
+  
+  - if can? :manage, Course
+    = link_to('Add New Course', new_course_path)
+
+.courses
+- @courses.each do |course|
+  %p= link_to(course.name, course_path(course))
+
+= raw(event_calendar)

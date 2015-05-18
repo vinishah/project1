@@ -1,0 +1,27 @@
+%h2= @course.name
+%p= "This course takes place in: #{@course.city}"
+%p= "It is #{@course.duration} long"
+%p= "It costs: #{number_to_currency(@course.price)}"
+%p= "The start date is: #{@course.start_at}"
+%p= "The end date is: #{@course.end_at}"
+
+%p= "The maximum number of students in this class will be: #{@course.max_capacity}"
+
+- if can? :manage, @course
+
+  %p= link_to('Edit', edit_course_path(@course))
+
+  %p= link_to('Delete', course_path(@course), method: :delete)
+
+
+- if user_signed_in?
+
+  = form_for Booking.new do |f|
+    = f.hidden_field :course_id, value: @course.id 
+
+    = f.hidden_field :user_id, value: current_user.id
+    = f.submit 'Apply for Course', :onclick => "alert('Thank you for submitting your application! GA will follow up within 7 working days.')"
+
+- else
+  %p You must sign up to book a course with General Assembly.
+  = link_to "signup", new_user_registration_path

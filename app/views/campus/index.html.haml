@@ -1,0 +1,15 @@
+%h2 GA Campuses
+
+- @campus.each do |campu|
+  %p= link_to(campu.name, campu_path(campu))
+
+
+  - if can? :manage, campu  
+    %p= link_to('Edit', edit_campu_path(campu))
+    = link_to('Delete', campu_path(campu), method: :delete)
+
+- if can? :manage, Campu
+  %p= link_to('Add New Campus', new_campu_path)
+
+ 
+

@@ -1,0 +1,10 @@
+%h2 Index of Classrooms
+
+- @classrooms.each do |classroom|
+
+  %p= link_to(classroom.name, classroom_path(classroom))
+
+
+- if can? :manage, Classroom
+
+  %p= link_to('New Classroom', new_classroom_path) 
